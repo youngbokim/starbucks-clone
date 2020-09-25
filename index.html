@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
 
-  <body>
+  <body onscroll="scrollFadeIn()">
     <header>
       <nav id="gnb">
         <div id="logo">
@@ -65,9 +65,10 @@
 
       <section id="hero">
         <div class="hero_wrap">
-          <figure>
+          <figure class="hero_title">
             <img src="img/2020_autumn1_emblem.png" />
           </figure>
+
           <div class="hero_link_more">
             <a href="">자세히 보기</a>
           </div>
@@ -159,8 +160,10 @@
 
       <section id="new_menu_1">
         <div class="new_menu_1_wrap">
-          <figure><img src="img/20_autumn1_bean.png" /></figure>
-          <div class="new_menu_1_text">
+          <figure id="id_new_menu_1_figure">
+            <img src="img/20_autumn1_bean.png" />
+          </figure>
+          <div id="id_new_menu_1_text" class="new_menu_1_text">
             <h2><span>가을의 시작을 알려줄</span>콜롬비아 산탄데르</h2>
             <h3>
               과즙이 톡톡 튀는 사과와 같은 산미와<br />
@@ -360,5 +363,18 @@
         <p>ⓒ 2020 Starbucks Coffee Company. All Rights Reserved.</p>
       </address>
     </footer>
+
+    <script>
+      function scrollFadeIn() {
+        console.log(document.body.scrollTop);
+        if (document.body.scrollTop > 700) {
+          document.getElementById("id_new_menu_1_figure").style =
+            "animation: new_menu_fade_in_left 2s forwards;";
+
+          document.getElementById("id_new_menu_1_text").style =
+            "animation: new_menu_fade_in_right 2s forwards;";
+        }
+      }
+    </script>
   </body>
 </html>

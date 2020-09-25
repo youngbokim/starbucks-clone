@@ -66,6 +66,40 @@ sup {
   font-size: 1em;
 }
 
+/* animation */
+
+@keyframes event_fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes new_menu_fade_in_left {
+  0% {
+    left: -550px;
+    opacity: 0;
+  }
+
+  100% {
+    left: calc(50% - 550px);
+    opacity: 1;
+  }
+}
+
+@keyframes new_menu_fade_in_right {
+  0% {
+    right: -550px;
+  }
+
+  100% {
+    right: calc(50% - 550px);
+  }
+}
+
 /* 헤더 스타일 */
 
 header {
@@ -191,8 +225,11 @@ nav {
   position: relative;
 }
 
-.hero_wrap figure {
+.hero_title {
   padding: 20px 0 0 0;
+
+  opacity: 0;
+  animation: event_fade_in 1s ease-in 2.5s forwards;
 }
 
 .hero_link_more {
@@ -203,6 +240,9 @@ nav {
   text-align: center;
   margin: 20px 0 0 0;
   transition: all 0.4s;
+
+  opacity: 0;
+  animation: event_fade_in 1s ease-in 3s forwards;
 }
 
 .hero_link_more a {
@@ -227,6 +267,9 @@ nav {
   bottom: 100px;
   left: 50px;
   text-align: center;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 0.5s forwards;
 }
 
 .hero_event_1_img {
@@ -234,6 +277,9 @@ nav {
   bottom: -13px;
   left: 198px;
   width: 358px;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 0.5s forwards;
 }
 
 .hero_event_1_img img {
@@ -246,6 +292,9 @@ nav {
   top: 135px;
   left: 480px;
   text-align: center;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 1s forwards;
 }
 
 .hero_event_2_img {
@@ -253,6 +302,9 @@ nav {
   bottom: 65px;
   left: 418px;
   width: 379px;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 1s forwards;
 }
 
 .hero_event_2_img img {
@@ -265,6 +317,9 @@ nav {
   top: 135px;
   left: 715px;
   text-align: center;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 1.5s forwards;
 }
 
 .hero_event_3_img {
@@ -272,6 +327,9 @@ nav {
   bottom: 6px;
   left: 704px;
   width: 328px;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 1.5s forwards;
 }
 
 .hero_event_3_img img {
@@ -284,6 +342,9 @@ nav {
   bottom: 50px;
   left: 880px;
   text-align: center;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 2s forwards;
 }
 
 .hero_event_4_img {
@@ -291,6 +352,9 @@ nav {
   bottom: 32px;
   left: 891px;
   width: 304px;
+  opacity: 0;
+
+  animation: event_fade_in 1s ease-in 2s forwards;
 }
 
 .hero_event_4_img img {
@@ -460,6 +524,83 @@ nav {
 /* New menu 스타일 */
 
 #new_menu_1 {
+  position: relative;
+  background: url(img/20_autumn1_bg.jpg);
+  width: 100%;
+  height: 573px;
+}
+
+.new_menu_1_wrap {
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.new_menu_1_wrap figure {
+  position: absolute;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100;
+  left: -550px;
+}
+
+.new_menu_1_wrap figure img {
+  width: 210px;
+}
+
+.new_menu_1_text {
+  position: absolute;
+  width: 550px;
+  height: 573px;
+  right: 410px;
+  top: 0;
+
+  /* animation: new_menu_fade_in_right 2s forwards; */
+}
+
+.new_menu_1_text h2 {
+  margin: 160px 0 20px 0;
+  font-size: 36px;
+  line-height: 30px;
+  color: rgb(0, 112, 74);
+}
+.new_menu_1_text h2 span {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: rgb(17, 17, 17);
+  display: block;
+}
+
+.new_menu_1_text h3 {
+  color: rgb(17, 17, 17);
+  margin: 0 0 30px 0;
+}
+
+.new_menu_1_button_more {
+  width: 125px;
+  height: 38px;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(17, 17, 17);
+  border-radius: 4px;
+  color: rgb(17, 17, 17);
+  transition: all 0.4s;
+}
+
+.new_menu_1_button_more:hover {
+  background: rgba(17, 17, 17, 1);
+  border: 2px solid rgb(17, 17, 17);
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* menu 고정형 스타일 */
+
+/* 
+#new_menu_1 {
+  position: relative;
   background: url(/img/20_autumn1_bg.jpg);
   width: 100%;
   height: 573px;
@@ -482,14 +623,6 @@ nav {
 .new_menu_1_wrap figure img {
   width: 210px;
 }
-
-/* .new_menu_1_text { 
-   width: 50%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
-} */
 
 .new_menu_1_text {
   width: 50%;
@@ -530,7 +663,7 @@ nav {
   border-radius: 4px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-}
+} */
 
 /* Kenya 섹션 */
 
