@@ -15,12 +15,30 @@
     />
     <meta name="author" content="Starbucks co.ltd" />
 
+    <!-- animate css added -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW({
+        boxClass: "wow", // default
+        animateClass: "animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      }).init();
+    </script>
+
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
     <!-- <link rel="icon" type="image/x-icon" href="img/favicon_apple16.png" sizes="16x16">  -->
     <!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
   <body onscroll="scrollFadeIn()">
@@ -55,7 +73,7 @@
     </header>
 
     <main>
-      <aside id="naver_order">
+      <aside id="naver_order" class="animate__animated animate__bounce">
         <a
           href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=1729"
         >
@@ -208,7 +226,9 @@
       <section id="favorite">
         <div class="favorite_wrap">
           <div class="favorite_text">
-            <figure><img src="img/fav_prod_txt01.png" /></figure>
+            <figure class="wow bounceInUp">
+              <img src="img/fav_prod_txt01.png" />
+            </figure>
             <h3>다양한 메뉴를<br />스타벅스에서 즐겨보세요.</h3>
             <h4>
               스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료<br />
@@ -234,7 +254,7 @@
           <div class="magazine_line_v"></div>
           <div class="magazine_line_h"></div>
           <figure class="magazine_img">
-            <img src="img/reserve_visual_pc.png" />
+            <img class="wow tada" src="img/reserve_visual_pc.png" />
           </figure>
           <div class="magazine_text">
             <h2>RESERVE MAGAZINE <img src="img/reserve_logo.png" /></h2>
